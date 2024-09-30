@@ -3,16 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-main: #F9F9F9;
+  --bg-pry: #E5E7EB;
+  --fg-main: #171717;
+  --base-1: #000000;
+  --base-2: #FFFFFF;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg-main: #000000;
+    --bg-pry: #E5E7EB;
+    --fg-main: #ededed;
+    --base-1: #F9FAFB;
+    --base-2: #343434;
   }
-}
+} */
 
 body {
   color: var(--foreground);
@@ -23,5 +29,15 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .visual-hide {
+    visibility: null;
+    opacity: 0;
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    top: 100000000px;
+    left: 99999999px;
   }
 }

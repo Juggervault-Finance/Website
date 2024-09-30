@@ -8,9 +8,22 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        instrument: ['var(--font-instrument)', 'sans'],
+      },
+      boxShadow: {
+        csbtn: "2px 2px 24.3px 0px #B3B3B340",
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        bg: "var(--bg-main)",
+        fg: "var(--fg-main)",
+        basic: {
+          50:"var(--base-1)",
+          100: "var(--base-2)",
+        },
+        primary: {
+          50: "var(--bg-pry)",
+        }
       },
     },
   },
