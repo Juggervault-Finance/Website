@@ -103,7 +103,7 @@ export default function RootLayout({
               </div>
 
               <div className="mt-8">
-                <h3 className="text-4xl mx-auto w-fit font-medium">Get Instant Loans With No Hassle</h3>
+                <h3 className="text-4xl mx-auto w-fit font-medium font-clash">Get Instant Loans With No Hassle</h3>
               </div>
 
               <form className="mt-8">
