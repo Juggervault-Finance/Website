@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         instrument: ['var(--font-instrument)', 'sans'],
+        clash: ['var(--font-clash'],
       },
       boxShadow: {
         csbtn: "2px 2px 24.3px 0px #B3B3B340",

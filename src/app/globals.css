@@ -8,15 +8,17 @@
   --fg-main: #171717;
   --base-1: #000000;
   --base-2: #FFFFFF;
+  --text-sec-1: #6B7280,
 }
 
 /* @media (prefers-color-scheme: dark) {
   :root {
     --bg-main: #000000;
     --bg-pry: #E5E7EB;
-    --fg-main: #ededed;
+    --fg-main: #EDEDED;
     --base-1: #F9FAFB;
     --base-2: #343434;
+    --text-sec-1: #9CA3AF;
   }
 } */
 
@@ -33,11 +35,13 @@ body {
 
   .visual-hide {
     visibility: null;
+    overflow: hidden;
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
     opacity: 0;
+    white-space: nowrap; 
+    position: absolute;
     height: 1px;
     width: 1px;
-    position: absolute;
-    top: 100000000px;
-    left: 99999999px;
   }
 }

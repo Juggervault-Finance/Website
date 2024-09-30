@@ -1,11 +1,42 @@
 import type { Metadata } from "next";
 import { Instrument_Sans } from "next/font/google";
+import localFont from 'next/font/local'
 import "./globals.css";
 import { GoDotFill } from "react-icons/go";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
 
 const instruments = Instrument_Sans({
   subsets: ['latin'],
   variable: "--font-instrument",
+})
+
+const clash = localFont({
+  src: [
+    {
+      path: './fonts/clash-grotesk/ClashGrotesk-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/clash-grotesk/ClashGrotesk-Semibold.otf',
+      weight: '600',
+      style: 'normal',
+    },
+    { 
+      path: './fonts/clash-grotesk/ClashGrotesk-Medium.otf',
+      weight: '500',
+    },
+    {
+      path: './fonts/clash-grotesk/ClashGrotesk-Regular.otf',
+      weight: '400',
+    },
+    {
+      path: './fonts/clash-grotesk/ClashGrotesk-Regular.otf',
+      weight: '300'
+    }
+  ],
+  variable: "--font-clash"
 })
 
 
@@ -22,9 +53,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${instruments.variable} antialiased`}
+        className={`${instruments.variable} ${clash.variable} antialiased`}
       >
-        <div className="w-full relative min-h-screen bg-bg">
+        <div className="w-full font-instrument relative max-h-screen h-screen bg-bg">
           <header className="w-full">
             <div className="w-full">
               <div className="h-24">
@@ -101,14 +132,20 @@ export default function RootLayout({
                   </ul>
 
                   <ul className="flex items-center justify-end gap-4">
-                    <li>Whitepaper</li>
-                    <li>About</li>
+                    <li>
+                      <span className="visual-hide">X (Formerly Twitter)</span>
+                      <FaXTwitter />
+                    </li>
+                    <li>
+                      <span className="visual-hide">LinkedIn</span>
+                      <FaLinkedin />
+                    </li>
                   </ul>
                 </nav>
               </div>
 
               <div className="mt-8">
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between text-sm">
                   <p>Made with <em className="hidden">Love</em> &#x2764;&#xfe0f;</p>
 
                   <p>&copy; 2024 Juggervault. All rights reserved.</p>
