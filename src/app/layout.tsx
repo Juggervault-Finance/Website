@@ -55,7 +55,7 @@ export default function RootLayout({
       <body
         className={`${instruments.variable} ${clash.variable} antialiased`}
       >
-        <div className="w-full font-instrument relative max-h-screen h-screen bg-bg">
+        <div className="w-full font-instrument relative max-h-screen h-screen bg-bg overflow-scroll">
           <header className="w-full">
             <div className="w-full">
               <div className="h-24">
