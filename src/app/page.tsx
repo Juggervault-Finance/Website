@@ -5,6 +5,7 @@ import MoneyManLarge from "../assets/money-man-holding-money-lg.png";
 import AssetPitch from "../assets/assets-pitch-image.png";
 import EllipseLockFrame from "../assets/ellipse-lock-frame.png";
 import WalletFrame from "../assets/wallet-patch-frame.png"
+import { FeaturesList, SingleCoinSVG } from "./(components)/images/features-icons";
 
 export default function Home() {
   return (
@@ -42,7 +43,7 @@ export default function Home() {
         <div className="w-full">
           <div className="w-max mx-auto text-center">
             <h3 className="font-clash font-medium text-3xl max-w-3xl">How Juggervault Works</h3>
-            <p className="mt-5 text-sec-50 font-medium max-w-xl">
+            <p className="mt-5 text-sec-50 font-semibold max-w-xl">
               Your assets, your loans, your control. Unlock your potential with decentralised savings and loans in just a few easy steps.
             </p>
           </div>
@@ -94,6 +95,33 @@ export default function Home() {
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="w-full mt-20">
+        <div>
+          <div className="w-max mx-auto text-center">
+            <h2 className="font-clash-font-medium text-3xl max-w-3xl">JuggerVault Features</h2>
+
+            <p className="text-sec-50 font-semibold max-w-xl text-base mt-10">
+              Explore our innovative features designed to simplify your borrowing experience and empower your financial journey. From fast loans to community governance, see how we put you first!
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-16 w-full">
+          <ul className="px-28 grid grid-cols-1 gap-10 sm:grid-cols-3 lg:grid-cols-3">
+            {FeaturesList.map(({id, title, icon: Icon, description }) => (
+              <li key={id} className="bg-white rounded-2xl border border-[#F3F3F3] text-left px-6 py-5">
+                <div>
+                  <Icon />
+                </div>
+
+                <h3 className="font-clash font-medium text-2xl mt-6">{title}</h3>
+                <p className="text-[#4B5563] mt-4">{description}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
