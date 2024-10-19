@@ -16,7 +16,7 @@ export default function Home() {
           </div>
 
           <div className="mt-8 max-w-3xl mx-auto text-center">
-            <h2 className="font-clash font-medium text-6xl">Access the <strong className="text-[#95B0FF]">Funds</strong> You Need, <br /> When You Need Them</h2>
+            <h2 className="font-clash font-medium text-2xl lg:text-6xl text-center"><strong className="text-[#fff]">Access the</strong> <strong className="text-[#95B0FF]">Funds</strong> <strong className="text-[#fff]">You Need</strong>, <br /> <strong className="text-[#fff]">When You Need Them</strong> </h2>
           </div>
 
           <div className="mt-8">

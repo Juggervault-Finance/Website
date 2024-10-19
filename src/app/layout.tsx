@@ -5,6 +5,8 @@ import "./globals.css";
 import { GoDotFill } from "react-icons/go";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
+import Link from "next/link";
+import { FiMenu } from "react-icons/fi";
 
 const instruments = Instrument_Sans({
   subsets: ['latin'],
@@ -53,40 +55,44 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${instruments.variable} ${clash.variable} antialiased`}
+        className={`${instruments.variable} ${clash.variable} antialiased w-screen`}
       >
-        <div className="w-full font-instrument relative max-h-screen h-screen bg-bg overflow-scroll">
-          <header className="w-full">
-            <div className="w-full">
-              <div className="h-24">
-                <div className="px-12 py-4 flex items-center justify-between">
+        <div className="w-full font-instrument relative min-h-screen bg-bg overflow-scroll flex justify-start items-center flex-col gap-24">
+          <header className="w-full flex justify-between items-center px-6 lg:px-12 py-4">
+                
                   <div>
                     <span className="flex items-center justify-start gap-1">
                       <span className="rounded-lg h-8 w-7 inline-block bg-primary-50" />
-                      <strong className="font-bold text-lg">JuggerVault</strong>
+                      <strong className="font-bold text-lg text-[#fff]">JuggerVault</strong>
                     </span>
                   </div>
 
                   <div>
                     <nav>
-                      <ul className="flex items-center justify-center gap-10 text-basic-50 font-bold">
-                        <li>Whitepaper</li>
-                        <li>About</li>
-                        <li>Contact</li>
+                      <ul className="hidden lg:flex items-center justify-center gap-10 font-bold text-[#fff] capitalize">
+                        <li>
+                          <Link href="#">whitepaper</Link>
+                        </li>
+                        <li>
+                          <Link href="#">about</Link>
+                        </li>
+                        <li>
+                          <Link href="#">contact</Link>
+                        </li>
                       </ul>
                     </nav>
                   </div>
 
                   <div>
-                    <div>
-                      <button className="rounded-[52px] bg-[#1E42AC] text-white font-semibold px-6 py-3">
+                      <button className="hidden lg:block rounded-[52px] bg-[#1E42AC] text-white font-semibold px-6 py-3">
                         Join the waitlist
                       </button>
-                    </div>
+                      <button className="btn btn-ghost btn-square btn-sm lg:hidden">
+                        <FiMenu color="#fff" size={25} />
+                      </button>
                   </div>
-                </div>
-              </div>
-            </div>
+                
+              
           </header>
 
           <main>
